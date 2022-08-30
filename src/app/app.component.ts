@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { getTestBed } from '@angular/core/testing';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +8,12 @@ import { getTestBed } from '@angular/core/testing';
 export class AppComponent {
   title = 'angular2';
   rootName = 'Val';
+  rootItems = ['apples', 'bananas', 'cherries'];
+
+  onItemWasAdded(newItem) {
+    this.rootItems.push(newItem);
+    console.log(this.rootItems);
+  }
 
   onNameChanged(newName) {
     this.rootName = newName;
