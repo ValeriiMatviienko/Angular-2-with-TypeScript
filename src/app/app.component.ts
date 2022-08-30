@@ -8,6 +8,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'ANGULAR';
   rootName = 'Val';
+  rootItems = ['apples', 'bananas', 'cherries'];
+
+  onItemWasAdded(newItem) {
+    this.rootItems.push(newItem);
+    console.log(this.rootItems);
+  }
 
   onNameChanged(newName) {
     this.rootName = newName;

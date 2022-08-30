@@ -99,4 +99,17 @@
   </div>
 </div>
 
-<app-user [name]="rootName" (nameChanged)="onNameChanged($event)"></app-user>
+<div class="container" style="margin: 20px">
+  <div class="row">
+    <div class="col-xs-12">
+      <app-user
+        [name]="rootName"
+        (nameChanged)="onNameChanged($event)"
+      ></app-user>
+      <app-cart
+        [items]="rootItems"
+        (itemAdded)="onItemWasAdded($event)"
+      ></app-cart>
+    </div>
+  </div>
+</div>
