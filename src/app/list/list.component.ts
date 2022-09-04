@@ -25,10 +25,12 @@ export class ListComponent implements OnInit, OnDestroy {
       .fetchCharacters()
       .pipe(
         map((data: any) => {
-          return data.results.map((res: any) => ({
-            ...res,
-            side: '',
-          }));
+          return data.results
+            .map((res: any) => ({
+              ...res,
+              side: '',
+            }))
+            .slice(0, 5);
         })
       )
       .subscribe((data) => {
